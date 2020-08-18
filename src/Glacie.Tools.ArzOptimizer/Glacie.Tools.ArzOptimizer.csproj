@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>gx-arz-optimizer</AssemblyName>
+    <RootNamespace>Glacie.Tools</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ArzOptimizer.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Glacie.Data.Arz" Version="0.1.0" />
+    <PackageReference Include="Glacie.Private.Core" Version="0.1.0" />
+  </ItemGroup>
+
+</Project>

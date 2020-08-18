@@ -1,0 +1,37 @@
+<Project>
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <Nullable>enable</Nullable>
+
+    <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+
+    <IsPackable>false</IsPackable>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\artifacts\</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>lixiss</Authors>
+    <PackageDescription>Lixiss's Glacie</PackageDescription>
+    <!--
+    <Description></Description>
+    <Copyright></Copyright>
+    -->
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- <PackageIcon></PackageIcon> -->
+    <IncludeSymbols>false</IncludeSymbols>
+    <IncludeSource>false</IncludeSource>
+    <RepositoryUrl>https://github.com/lixiss/glacie-tools</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <!-- Don't assign versions by MinVer in Debug builds. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <MinVerSkip Condition="'$(MinVerSkip)' == ''">true</MinVerSkip>
+  </PropertyGroup>
+
+  <!-- Generate documentation in release builds. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>

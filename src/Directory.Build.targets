@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <!-- Create local nuget feed directory, otherwise restore will fail. -->
-  <Target Name="GxCreateLocalNugetCacheDirectory" BeforeTargets="Restore">
+  <Target Name="GxCreateLocalNugetCacheDirectory" BeforeTargets="Restore;CollectPackageReferences">
       <MakeDir Directories="$(MSBuildThisFileDirectory)..\.nuget-feed" />
   </Target>
 

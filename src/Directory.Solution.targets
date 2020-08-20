@@ -1,7 +1,0 @@
-<Project>
-
-  <Target Name="GxCreateLocalNugetCacheDirectory" BeforeTargets="Restore">
-      <MakeDir Directories="$(MSBuildThisFileDirectory)..\.nuget-feed" />
-  </Target>
-
-</Project>

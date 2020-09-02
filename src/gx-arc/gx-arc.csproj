@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>gx-arc</AssemblyName>
+    <RootNamespace>Glacie.Tools.Arc</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="OptimizeCommand.cs" />
+    <Compile Include="RebuildCommand.cs" />
+    <Compile Include="RemoveCommand.cs" />
+    <Compile Include="ReplaceCommand.cs" />
+    <Compile Include="RemoveMissingCommand.cs" />
+    <Compile Include="UpdateCommand.cs" />
+    <Compile Include="ProcessFileSystemEntriesCommand.cs" />
+    <Compile Include="CommandBase.cs" />
+    <Compile Include="EntryNameUtilities.cs" />
+    <Compile Include="InfoCommand.cs" />
+    <Compile Include="ExtractCommand.cs" />
+    <Compile Include="AddCommand.cs" />
+    <Compile Include="ProcessArchiveCommand.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ListCommand.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="VerifyCommand.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" Version="2.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20427.1" />
+
+    <PackageReference Include="Glacie.Data.Arc" Version="0.2.0" />
+    <PackageReference Include="Glacie.Private.Core" Version="0.2.0" />
+  </ItemGroup>
+
+</Project>

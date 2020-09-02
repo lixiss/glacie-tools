@@ -13,8 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Glacie.Data.Arz" Version="0.1.0" />
-    <PackageReference Include="Glacie.Private.Core" Version="0.1.0" />
+    <PackageReference Include="MinVer" Version="2.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <PackageReference Include="Glacie.Data.Arz" Version="0.2.0" />
+    <PackageReference Include="Glacie.Private.Core" Version="0.2.0" />
   </ItemGroup>
 
 </Project>
